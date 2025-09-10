@@ -99,3 +99,13 @@ function findGreatest(acc, element) {
 }
 const great2 = numbers2.reduce((acc, element) => findGreatest(acc, element));
 console.log(great2);
+
+//with reduce and if-else
+const great3 = numbers2.reduce((great, cv) => {
+  if (great > cv) {
+    return great;
+  } else {
+    return cv;
+  }
+}, numbers2[0]);
+console.log(great3);
