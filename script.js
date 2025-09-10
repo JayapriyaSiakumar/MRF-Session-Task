@@ -92,3 +92,10 @@ let great1 = numbers2.reduce(
   numbers2[0]
 );
 console.log(great1);
+
+// Normal Function
+function findGreatest(acc, element) {
+  return acc > element ? acc : element;
+}
+const great2 = numbers2.reduce((acc, element) => findGreatest(acc, element));
+console.log(great2);
