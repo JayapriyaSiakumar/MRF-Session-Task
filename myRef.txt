@@ -1,0 +1,208 @@
+Map,Reduce,Filter (MRF)
+=> HOF (Higher Order Functions) / Callback function
+
+1.Map :- It iterates/transforms over each and every element in an array and produces a new array.
+syntax:- arrayname.map(we need to pass a function)
+
+//example without map
+const arr = [12,13,14,15]
+steps:- 
+ 1 .for loop
+ 2. multiply element by 2
+ 3. create a new array and push into it
+ 4. print new array.
+
+//!example without map
+/*const a = [12,13,14,15]
+const r = []
+for(var i=0;i<a.length;i++){
+   r.push(a[i]*2)
+}
+console.log(r);
+*/
+
+//with map 
+=> It takes function as a parameter and apply on each and every element in an array
+=> it returns new array
+=> It will be using arrow function maximum (because of memory and time consumption)
+=> it is an array method
+=> var res = arr.map(()=>{})
+=> parameter can be userdefined (ele,element,i,a...)
+=> when there is only one line in function there is no need of return
+
+//!example using map with normal function
+/*const arr = [12,13,14,15]
+function double(ele){
+    return ele*2
+}
+const result = arr.map(double)
+console.log(result);
+*/
+//!second method
+/*const arr = [12,13,14,15]
+const result = arr.map(function(ele){
+    return ele*2
+})
+console.log(result);
+*/
+//!third method
+/*const arr = [12,13,14,15]
+const result = arr.map((ele)=>{
+    return ele*2
+})
+console.log(result);
+*/
+//!fourth method
+/*const arr = [12,13,14,15]
+const result = arr.map((ele)=>ele*2)
+console.log(result);
+*/
+const a = ["apple","mangoe","orange"]   // apples,mangoes,oranges
+const result = a.map((ele)=>ele+"s")
+console.log(result);
+----------------------------------
+Filter:-
+=> It is basically used to filter
+=> used to filter the elements inside the array
+=> filter is based on condition
+=> It takes function as a parameter and apply on each and every element in an array
+=> It returns new array
+=>If the condition is true , it will push the element to array else it will be rejected
+syntax:- 
+arrayname.filter(function)
+
+//example without filter
+const arr = [12,13,14,15]
+steps:- 
+ 1 .for loop
+ 2. if condition for even number
+ 3. create a new array and push into it
+ 4. print new array.
+
+//!example without filter
+/*const a = [12,13,14,15]
+const r = []
+for(var i=0;i<a.length;i++){
+   if(a[i]%2===0){
+    r.push(a[i])
+   }
+}
+console.log(r);
+*/
+//!with filter
+const arr =[12,13,14,15]
+const result = arr.filter((ele)=>ele%2===0)
+console.log(result);
+
+ const greatest = [4,3,2,1,5]  // [3,4,5]
+ const r = greatest.filter((ele)=>ele>2)
+ console.log(r);
+
+Reduce :- (Confusing topic because it is not similar to the name)
+=> It is generally used when we have to take all the array elements and print the
+single value. Example:- greatest number ,sum of an array,....(total,summation)
+=> It is an array method
+=> syntax:- 
+arrayname.reduce((acc,cv)=>{
+
+},acc)
+acc=> accumulator is the initial value
+=> if initial value is not given it takes the first value
+cv = > current value is the current element/value
+//!example without reduce
+/*const arr = [1,2,3,4,5]
+let sum = 0;
+for(var i=0;i<arr.length;i++){
+    sum = sum+arr[i]
+}
+console.log(sum);
+*/
+//!using reduce
+/*const a = [1,2,3,4,5]
+const result = a.reduce((sum,i)=>{
+   return sum+i
+},0)
+console.log(result);
+*/
+const a = [1,2,3,4,5]
+const result = a.reduce((sum,i)=>{
+   return sum*i
+},)
+console.log(result);
+
+--------------------------------
+
+// 1. [mangoe, orange, apple] add the word S to end of each string in an array.
+// 2. [10,11,12,89,35,156,199,25,32,87] Find the numbers which are greater than 80 from given array.
+// 3. [10,12,15,16,8,11] Find the largest/ greatest number in an array. 
+
+-----------------------------------------------------------------------
+
+1.Split:- 
+ => It splits the string into individual character array.
+ => It depends on Input
+ => It only works for string.
+ syntax:- 
+ split("")
+  
+example:-
+ var a = "abcd efgh".split(" ")
+ var b = a[0].split("")
+ var c = a[1].split("")
+ console.log(b)
+ console.log(c)
+-------------------------------
+ var a = "good"
+
+----------------------------------
+ var a = "thank you"
+--------------------------------------
+var a = "iam fine"
+--------------------------------------------
+ var a = "hi hello how are you"
+----------------------------------------------
+2.Join:-
+=> It joins the individual character array 
+=> It depends on Output
+syntax:-
+join("")
+
+Example:-
+var a = "good".split("")
+console.log(a.join(" "));
+----------------------------------------------------------
+Input:- 
+"guvi"
+Ouput:-
+g u v i
+
+var a = "guvi"
+-------------------------------------------------------------
+Input:-
+"guvi"
+output:-
+g*u*v*i
+
+var a = "guvi"
+----------------------------------------------------------------
+Input:-
+"guvigeek"
+Output:-
+g u v i g e e k
+
+var a = "guvigeek"
+------------------------------------------------------------------
+Input:-
+"guvigeek"
+Output:-
+g
+u
+v
+i
+g
+e
+e
+k
+
+var a = "guvigeek"
+-----------------------------------------------------------------

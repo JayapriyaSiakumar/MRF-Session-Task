@@ -109,3 +109,5 @@ const great3 = numbers2.reduce((great, cv) => {
   }
 }, numbers2[0]);
 console.log(great3);
+
+// ___________________________________________________________________________
